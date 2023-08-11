@@ -1,0 +1,259 @@
+:root {
+    --moderate-violet: hsl(263, 55%, 52%);
+    --very-dark-gray-blue: hsl(217, 19%, 35%);
+    --very-dark-black-blue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+
+    /*Neutral*/
+
+    --light-gray: hsl(0, 0%, 81%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+
+    --ff-Barlow-Semi-Condensed: 'Barlow Semi Condensed', sans-serif;
+
+    --outline-wrapper: 1px solid red;
+    --outline-element: 1px solid black;
+    /*1. "Verified Graduate" has the same color as the person's name with 50% opacity
+    2. Review paragraphs inside the quotations have the same color as well, but are at 70% opacity
+    */
+}
+
+
+html, body {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    margin: 0;
+    background-color: var(--light-grayish-blue);
+    font-family: var(--ff-Barlow-Semi-Condensed);
+}
+
+p, h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    margin: 2rem 1rem;
+}
+
+.testimonial-wrapper {
+    width: 100%;
+    display: grid;
+    gap: 2rem;
+}
+
+.testimonial-wrapper div {
+    border-radius: 10px;
+}
+
+.testimonial-element-container-one, .testimonial-element-container-two {
+    display: grid;
+    gap: 2rem;
+}
+
+.testimonial-element-wrapper-one, .testimonial-element-wrapper-two {
+    gap: 2rem;
+    display: grid;
+}
+
+.purple-testimonial-element {
+    background-color: var(--moderate-violet);
+    display: grid;
+    place-content: start;
+    gap: 1.2rem;
+    padding: 2rem;
+    position: relative;
+}
+
+.pattern-quotation-svg {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    z-index: 1;
+}
+
+.profile-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.profile-image-wrapper {
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+}
+
+.profile-image {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.profile-info-wrapper {
+    display: grid;
+}
+
+.profile-name {
+    width: max-content;
+    font-size: 15px;
+    color: var(--light-gray);
+}
+
+.profile-status {
+    width: max-content;
+    font-size: 13px;
+    color: var(--light-gray);
+    opacity: 50%;
+}
+
+.testimonial-text-wrapper {
+    display: flex;
+    width: 100%;
+}
+
+.testimonial-text {
+    z-index: 2;
+    color: var(--White);
+    font-size: 21px;
+    line-height: 27px;
+    font-weight: 600;
+}
+
+.testimonial-quote-wrapper {
+    display: flex;
+    width: 100%;
+}
+
+.testimonial-quote {
+    color: var(--light-gray);
+    opacity: 70%;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.dark-gray-testimonial-element {
+    background-color: var(--very-dark-gray-blue);
+    display: grid;
+    gap: 1.2rem;
+    padding: 2rem;
+    position: relative;
+}
+
+.testimonial-element-container-two {
+    height: 100%;
+}
+
+.white-testimonial-element {
+    background-color: white;
+    display: grid;
+    gap: 1.2rem;
+    padding: 2rem;
+    position: relative;
+}
+
+.white-testimonial-element .profile-name {
+    color: var(--very-dark-gray-blue);
+}
+
+.white-testimonial-element .profile-status {
+    color: var(--very-dark-gray-blue);
+}
+
+.white-testimonial-element .testimonial-text {
+    color: var(--very-dark-gray-blue);
+}
+
+.white-testimonial-element .testimonial-quote {
+    color: var(--very-dark-gray-blue);
+    opacity: 70%;
+}
+
+.very-dark-black-blue-testimonial-element {
+    background-color: var(--very-dark-black-blue);
+    display: grid;
+    gap: 1.2rem;
+    padding: 2rem;
+    position: relative;
+}
+
+.very-dark-black-blue-testimonial-element .profile-image {
+    border-color: var(--moderate-violet);
+}
+
+.purple-testimonial-element, .dark-gray-testimonial-element, .very-dark-black-blue-testimonial-element, .white-testimonial-element {
+    box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+
+@media screen and (min-width: 435px) { 
+    main {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .purple-testimonial-element, .dark-gray-testimonial-element, .very-dark-black-blue-testimonial-element, .white-testimonial-element {
+        width: 400px;
+    }
+
+}
+
+@media screen and (min-width: 1250px) {
+    html, body {
+        height: 100%;
+        overflow-y: hidden;
+        position: relative;
+    }
+
+    main {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+    }
+
+    .testimonial-wrapper {
+        width: 100%;
+        display: flex;
+    }
+
+    .testimonial-element-wrapper-one, .testimonial-element-wrapper-two {
+        gap: 2rem;
+        display: flex;
+        width: fit-content;
+    }
+
+    .purple-testimonial-element {
+        width: 550px;
+    }
+
+    .dark-gray-testimonial-element {
+        max-width: 200px;
+    }
+    
+    .white-testimonial-element {
+        max-width: 200px;
+    }
+    
+    .very-dark-black-blue-testimonial-element{
+        width: 550px;
+    }
+
+    .testimonial-element-container-two .white-testimonial-element {
+        display: grid;
+        place-content: start;
+    }
+
+    .testimonial-element-container-two .white-testimonial-element .testimonial-text {
+        min-width: 200px;
+    }
+
+    .pattern-quotation-svg {
+        position: absolute;
+        top: 0;
+        right: 100px;
+    }
+}
